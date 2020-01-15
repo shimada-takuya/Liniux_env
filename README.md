@@ -5,31 +5,35 @@ Geant4, Garfiled++, ROOT, cmake, pythonなどの環境構築
 * Cmake(serverなどで local)
 
 .bashrcに以下を記入
-::export PATH=$HOME/local/CMAKE/bin:$PATH::
-::export LD_LIBRARY=$HOME/lib/:$LD_LIBRARY_PATH::
-
+```
+#.bachrc
+export PATH=$HOME/local/CMAKE/bin:$PATH::
+export LD_LIBRARY=$HOME/lib/:$LD_LIBRARY_PATH::
+```
 ソースをダウンロード
 Cmakeをダウンロードしたいところで
-`$ git clone git://cmake.org/cmake.git`
 
+`$ git clone git://cmake.org/cmake.git`
 `$ cd cmake`
 `$ ./configure —prefix=$HOME/local/CMAKE(インストールしたいところ)`
 `$ make`
 `$ make install`
 
 * Cmake(Mac)
+
 `$ brew install cmake`
 ---
 *  Root build
 
 localで
+
 `$ git clone  http://github.com/root-project/root.git .`
 `$ cd root`
 `$ git checkout *******`
 
 builddirを作成し、そこで
-`$ cmake path/to/src -DCMAKE_CXX_COMPILER=/usr/local/gcc-4.9.1/bin/g++ -DCMAKE_C_COMPILER=/usr/local/gcc-4.9.1/bin/gcc  -DPYTHON_EXECUTABLE=/usr/local/pyenv/versions/3.6.5/bin/python3`
 
+`$ cmake path/to/src -DCMAKE_CXX_COMPILER=/usr/local/gcc-4.9.1/bin/g++ -DCMAKE_C_COMPILER=/usr/local/gcc-4.9.1/bin/gcc  -DPYTHON_EXECUTABLE=/usr/local/pyenv/versions/3.6.5/bin/python3`
 `$ cmake —build . — -j. /path/to/builddir/bin/thisroot.sh`
 
 #root
@@ -37,13 +41,13 @@ builddirを作成し、そこで
 * Garfield++ build
 
 .bashrcに書く
-::export GARFIELD_HOME=~/local/Garfield::
-::export HEED_DATABASE=$GARFIELD_HOME/Heed/heed++/database::
-
+```
+#bachrc
+export GARFIELD_HOME=~/local/Garfield::
+export HEED_DATABASE=$GARFIELD_HOME/Heed/heed++/database
+```
 `$ git clone  https://gitlib.cern.ch/garfield/garfieldpp.git $GARFIELD_HOME`
-
 `$ cd $GARFIELD_HOME`
-
 `$ mkdir build`
 `$ mkdir install`
 `$ cd build`
@@ -62,6 +66,7 @@ eval “$(pyenv init -)”
 #python
 ---
 * Geant4 install & build
+
 [Geant4_CMake - KobaWiki](http://be.nucl.ap.titech.ac.jp/~koba/cgi-bin/moin.cgi/Geant4_CMake)
 
 `$ cd ~/local/Geant4/`
@@ -80,6 +85,7 @@ source ~/local/Geant4/geant4.10.05.p01-install/bin/geant4.sh
 #geant4
 ---
 * mount
+
 [Linuxサーバ間でのマウントについて - Linux系OS 解決済み| 【OKWAVE】](https://okwave.jp/qa/q7749733.html)
 サーバ側
 ```
@@ -103,6 +109,7 @@ $ python
 ```
 ---
 * jupyter lab
+
 [JupyterLabのすゝめ - Qiita](https://qiita.com/kirikei/items/a1639954ce5ccaf7ac3c)
 ```
 $ conda install -c conda-forge jupyterlab # anacondaを入れている場合
@@ -114,6 +121,5 @@ $ pipenv install jupyterlab # pipenvを入れている場合
 extention
 ```
 conda install -c conda-forge nodejs
-
 ```
 ---
