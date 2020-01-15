@@ -2,7 +2,7 @@
 Geant4, Garfiled++, ROOT, cmake, pythonなどの環境構築
 
 ---
-* Cmake(serverなどで local)
+## Cmake(serverなどで local)
 
 .bashrcに以下を記入
 ```
@@ -19,11 +19,12 @@ Cmakeをダウンロードしたいところで
 `$ make`
 `$ make install`
 
-* Cmake(Mac)
+## Cmake(Mac)
 
 `$ brew install cmake`
+
 ---
-*  Root build
+## Root build
 
 localで
 
@@ -36,9 +37,9 @@ builddirを作成し、そこで
 `$ cmake path/to/src -DCMAKE_CXX_COMPILER=/usr/local/gcc-4.9.1/bin/g++ -DCMAKE_C_COMPILER=/usr/local/gcc-4.9.1/bin/gcc  -DPYTHON_EXECUTABLE=/usr/local/pyenv/versions/3.6.5/bin/python3`
 `$ cmake —build . — -j. /path/to/builddir/bin/thisroot.sh`
 
-#root
+
 ---
-* Garfield++ build
+## Garfield++ build
 
 .bashrcに書く
 ```
@@ -55,17 +56,16 @@ export HEED_DATABASE=$GARFIELD_HOME/Heed/heed++/database
 `$ make -j4`
 `$ make install`
 
-#Garfield
 ---
-* pyenv
+## pyenv
 ```.bashrc
 export PYENV_ROOT=“$HOME/.pyenv”
 export PATH=“$PYENV_ROOT/bin:$PATH”
 eval “$(pyenv init -)”
 ```
-#python
+
 ---
-* Geant4 install & build
+## Geant4 install & build
 
 [Geant4_CMake - KobaWiki](http://be.nucl.ap.titech.ac.jp/~koba/cgi-bin/moin.cgi/Geant4_CMake)
 
@@ -82,9 +82,8 @@ eval “$(pyenv init -)”
 ```.bashrc
 source ~/local/Geant4/geant4.10.05.p01-install/bin/geant4.sh
 ```
-#geant4
 ---
-* mount
+## mount
 
 [Linuxサーバ間でのマウントについて - Linux系OS 解決済み| 【OKWAVE】](https://okwave.jp/qa/q7749733.html)
 サーバ側
@@ -101,14 +100,14 @@ $ mkdir {c_mount_DIR}
 $ mount -t nfs {server_ip}:{絶対パス}/{s_mount_DIR} {絶対パス}/{c_mount_DIR}
 ```
 ---
-* python
+## python
 ```
 $ pyenv install --list
 $ pyenv install (you want to install the src)
 $ python
 ```
 ---
-* jupyter lab
+## jupyter lab
 
 [JupyterLabのすゝめ - Qiita](https://qiita.com/kirikei/items/a1639954ce5ccaf7ac3c)
 ```
