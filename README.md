@@ -66,13 +66,7 @@ $ make -j4
 $ make install
 ```
 
----
-## pyenv
-```.bashrc
-export PYENV_ROOT=“$HOME/.pyenv”
-export PATH=“$PYENV_ROOT/bin:$PATH”
-eval “$(pyenv init -)”
-```
+
 
 ---
 ## Geant4 install & build
@@ -112,7 +106,15 @@ $ mkdir {c_mount_DIR}
 $ mount -t nfs {server_ip}:{絶対パス}/{s_mount_DIR} {絶対パス}/{c_mount_DIR}
 ```
 ---
-## python
+# python
+
+---
+## pyenv
+```.bashrc
+export PYENV_ROOT=“$HOME/.pyenv”
+export PATH=“$PYENV_ROOT/bin:$PATH”
+eval “$(pyenv init -)”
+```
 ```
 $ pyenv install --list
 $ pyenv install (you want to install the src)
