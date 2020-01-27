@@ -136,3 +136,68 @@ extention
 conda install -c conda-forge nodejs
 ```
 ---
+---
+### install
+`pip install jupyter`
+`jupyter notebook //ブラウザで開かれる`
+
+---
+* sshで開く方法
+ローカル側
+[Jupyter Notebook - おすすめの nbextensions まとめ - Pynote](http://pynote.hatenablog.com/entry/jupyter-notebook-nbextensions)
+[Jupyterを導入しよう -ローカル編- - Qiita](https://qiita.com/Miggy/items/8e4bb0fbfe32dd8c98d5)
+```
+$ pip install jupyter
+$ pip install https://github.com/ipython-contrib/IPython-notebook-extensions/archive/master.zip
+$ git clone https://github.com/ipython-contrib/IPython-notebook-extensions.git
+```
+ダウンロードした際のファイル「nbextensions」「 extensions」「templates」フォルダを、$(jupyter —data-dir)以下に配置。
+
+リモート側
+[Jupyterを導入しよう -リモート編- - Qiita](https://qiita.com/Miggy/items/5466a2c1e968602f3ebe)
+```
+$ jupyter notebook --generate-config
+$ pip install ipython
+In [1]: from IPython.lib import passwd
+In [2]: passwd()
+#2回パスワードを入力するとsha1:XXXXXXXXXが生成
+```
+---
+* リモートでLabを使うとき
+```
+$ jupyter notebook --generate-config #脳死で
+$ ls ~/.jupyter/
+jupyter_notebook_config.py #<-こいつが生成される
+$ vim jupyter_notebook_config.py
+```
+```#jupyter_notebook_config.py
+from jupyter_core.paths import jupyter_config_dir, jupyter_data_dir
+import os.path
+import sys
+
+sys.path.append(os.path.join(jupyter_data_dir(), 'extensions'))
+
+c = get_config()
+c.NotebookApp.extra_template_paths = [os.path.join(jupyter_data_dir(), 'templates')]
+c.NotebookApp.ip = 'i.p.adre.ss'(ssh側のipアドレス)
+c.NotebookApp.open_browser = True(Falseでもいい)
+c.NotebookApp.password = u'sha1:c1feb47be1eb:13c15239a3a080250c0d3e69efb4f2ace6c0f3dc'
+#ipythonで作ったときの鍵的なの
+c.NotebookApp.port = 9999
+c.NotebookApp.server_extensions = ['nbextensions']
+```
+ローカルとサーバをつなぐ
+```
+$ ssh -L 9999:10.37.0.236:9999 shimada@ip.address -Y -f -N
+#Backgroundでトンネルする。
+$ ssh shimada@ip.address jupyter-lab
+```
+
+node.jsをローカルにインストールする
+[ローカル環境にnode.jsをインストール - Qiita](https://qiita.com/sims0728/items/0b7443f00959ad1dbea7)
+```
+
+```
+Extensionからvimやらなんやらを設定できる。
+[Extensions — JupyterLab 1.2.5 documentation](https://jupyterlab.readthedocs.io/en/stable/user/extensions.html)
+
