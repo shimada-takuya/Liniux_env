@@ -2,7 +2,9 @@
 Geant4, Garfiled++, ROOT, cmake, pythonなどの環境構築
 
 ---
-## cmake(serverなどで local)
+## cmake
+
+### cmake(serverなどで local)
 
 .bashrcに以下を記入
 
@@ -24,7 +26,7 @@ $ make
 $ make install
 ```
 
-## cmake(Mac)
+### cmake(Mac)
 
 `$ brew install cmake`
 
