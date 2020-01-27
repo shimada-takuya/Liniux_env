@@ -2,7 +2,7 @@
 Geant4, Garfiled++, ROOT, cmake, pythonなどの環境構築
 
 ---
-## Cmake(serverなどで local)
+## cmake(serverなどで local)
 
 .bashrcに以下を記入
 
@@ -13,7 +13,8 @@ export LD_LIBRARY=$HOME/lib/:$LD_LIBRARY_PATH::
 ```
 
 ソースをダウンロード
-Cmakeをダウンロードしたいところで
+
+cmakeをダウンロードしたいところで
 
 ```
 $ git clone git://cmake.org/cmake.git
@@ -23,7 +24,7 @@ $ make
 $ make install
 ```
 
-## Cmake(Mac)
+## cmake(Mac)
 
 `$ brew install cmake`
 
@@ -196,7 +197,15 @@ $ ssh shimada@ip.address jupyter-lab
 node.jsをローカルにインストールする
 [ローカル環境にnode.jsをインストール - Qiita](https://qiita.com/sims0728/items/0b7443f00959ad1dbea7)
 ```
-
+$ git clone git://github.com/creationix/nvm.git ~/.nvm
+$ source ~/.nvm/nvm.sh
+$ nvm help
+$ nvm ls-remote
+$ nvm install 0.10.30 #インストールしたいバージョンを選択
+$ node -v
+v0.10.30
+$ nvm alias default v0.10.30
+default -> v0.10.30
 ```
 Extensionからvimやらなんやらを設定できる。
 [Extensions — JupyterLab 1.2.5 documentation](https://jupyterlab.readthedocs.io/en/stable/user/extensions.html)
