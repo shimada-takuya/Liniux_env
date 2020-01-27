@@ -45,7 +45,7 @@ builddirを作成し、そこで
 
 ```
 $ cmake path/to/src -DCMAKE_CXX_COMPILER=/usr/local/gcc-4.9.1/bin/g++ -DCMAKE_C_COMPILER=/usr/local/gcc-4.9.1/bin/gcc  -DPYTHON_EXECUTABLE=/usr/local/pyenv/versions/3.6.5/bin/python3
-$ cmake —build . -- -j4
+$ cmake --build . -- -j4
 ```
 インストール・cmake（コンパイル）完了。
 ```
