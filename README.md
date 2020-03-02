@@ -71,12 +71,7 @@ export HEED_DATABASE=$GARFIELD_HOME/Heed/heed++/database
 ```
 $ git clone  https://gitlab.cern.ch/garfield/garfieldpp.git $GARFIELD_HOME
 $ cd $GARFIELD_HOME
-$ mkdir build
-$ mkdir install
-$ cd build
-$ cmake $GARFIELD_HOME/garfieldpp -DCMAKE_INSTALL_PREFIX=$GARFIELD_HOME/install
-$ make -j4
-$ make install
+$ make
 ```
 
 
