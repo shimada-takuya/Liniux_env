@@ -10,8 +10,8 @@ Geant4, Garfiled++, ROOT, cmake, pythonなどの環境構築
 
 ```
 #.bachrc
-export PATH=$HOME/local/CMAKE/bin:$PATH::
-export LD_LIBRARY=$HOME/lib/:$LD_LIBRARY_PATH::
+export PATH=$HOME/local/CMAKE/bin:$PATH
+export LD_LIBRARY=$HOME/lib/:$LD_LIBRARY_PATH
 ```
 
 ソースをダウンロード
@@ -64,12 +64,12 @@ $ . /path/to/builddir/bin/thisroot.sh
 .bashrcに書く
 ```
 #bachrc
-export GARFIELD_HOME=~/local/Garfield::
+export GARFIELD_HOME=~/local/Garfield
 export HEED_DATABASE=$GARFIELD_HOME/Heed/heed++/database
 ```
 
 ```
-$ git clone  https://gitlib.cern.ch/garfield/garfieldpp.git $GARFIELD_HOME
+$ git clone  https://gitlab.cern.ch/garfield/garfieldpp.git $GARFIELD_HOME
 $ cd $GARFIELD_HOME
 $ mkdir build
 $ mkdir install
