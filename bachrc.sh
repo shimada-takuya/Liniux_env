@@ -1,5 +1,9 @@
 #.bashrc
 
+# key binding
+set -o vi
+bind '"jj":vim-movement-mode'
+
 #Prompt
 #PS1="\w $ "
 export PS1='\n\[\e[0m\]\t \[\e[94m\]\u \[\e[0m\]@ \[\e[95m\]\h\[\e[0m\] : \[\e[96m\]\w\[\e[0m\] \n\[\e[1;0m\]$ \[\e[0m\]'
