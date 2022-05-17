@@ -1,6 +1,11 @@
 syntax on
 
 "color scheme
+autocmd ColorScheme * highlight Normal ctermbg=none    
+autocmd ColorScheme * highlight LineNr ctermbg=none    
+autocmd ColorScheme * highlight Identifier ctermbg=none
+autocmd ColorScheme * highlight Special ctermbg=none   
+autocmd ColorScheme * highlight VertSplit ctermbg=none
 colorscheme iceberg
 "set background=dark
 
@@ -45,6 +50,10 @@ filetype plugin indent on
 let g:NERDTreeDirArrowExpandable = '>'
 let g:NERDTreeDirArrowCollapsible = 'v'
 
+"" netrw
+filetype plugin on
+let g:netrw_liststyle=3
+let g:netrw_preview=1
 
 " Search
 set incsearch
@@ -52,6 +61,16 @@ set ignorecase
 set smartcase
 set hlsearch
 
+" encoding
+set encoding=utf-8
+set fileencodings=utf-8
+" set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+
+"" file
+set nobackup
+set noundofile
+
+set backspace=indent,eol,start
 
 
 
