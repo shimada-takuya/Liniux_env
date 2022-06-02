@@ -68,4 +68,19 @@ alias la="ls -a"
 alias jupyter-susy16="ssh -L 9999:10.37.0.236:9999 shimada@10.37.0.236 -Y -f -N"
 #alias jupyter-susy16="ssh -L 8080:localhost:8080 shimada@10.37.0.236 -Y -f -N"
 
-
+#############################################################
+## git
+export GIT_EDITOR=vim
+export GIT_COMMITTER_NAME=shimada
+export GIT_COMMITTER_EMAIL=shimada@mesw.co.jp
+## SSH
+#export GIT_SSH=""
+## COMPLETION
+#source $LOCAL_HOME/.git-conf/git-completion.bash
+## PROMPT
+#source $LOCAL_HOME/.git-conf/git-prompt.sh
+#GIT_PS1_SHOWDIRTYSTATE=true
+#GIT_PS1_SHOWSTASHSTATE=true
+#GIT_PS1_SHOWUNTRACKEDFILES=true
+#GIT_PS1_SHOWUPSTREAM="auto"
+#GIT_PS1_SHOWCOLORHINTS=true
