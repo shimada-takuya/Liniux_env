@@ -1,0 +1,14 @@
+[user]
+    name = Takuya Shimada
+    email = shimada@mesw.co.jp
+[core]
+    editor = vim
+    pager = less
+[pager]
+    log = true
+    status = true
+    diff = true
+[alias]
+    glog = log --graph --oneline
+[diff]
+    tool = vimdiff
