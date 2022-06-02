@@ -9,6 +9,10 @@ autocmd ColorScheme * highlight VertSplit ctermbg=none
 colorscheme iceberg
 "set background=dark
 
+if &compatible
+	set nocompatible
+endif
+
 " statusline
 function! SetStatusLine()
         if mode() =~ 'i'
@@ -48,10 +52,10 @@ set smartindent
 
 "cursor
 "set cursorcolumn
-"let &t_ti.="\e[1 q"
-"let &t_SI.="\e[5 q"
-"let &t_EI.="\e[1 q"
-"let &t_te.="\e[0 q"
+let &t_ti.="\e[1 q"
+let &t_SI.="\e[5 q"
+let &t_EI.="\e[1 q"
+let &t_te.="\e[0 q"
 
 "cmd
 inoremap <C-j> <Down>
@@ -62,23 +66,6 @@ inoremap <silent> jj <Esc>
 noremap <tab> ==
 
 "Plagin
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-
-" Plugin '[Github Author]/[Github repo]' 
-Plugin 'preservim/nerdtree'
-
-call vundle#end()
-filetype plugin indent on
-
-" NERDtree setup
-"autocmd vimenter * NERDTree
-let g:NERDTreeDirArrowExpandable = '>'
-let g:NERDTreeDirArrowCollapsible = 'v'
 
 "" netrw
 filetype plugin on
