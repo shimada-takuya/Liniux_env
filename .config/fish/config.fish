@@ -27,7 +27,8 @@ if status is-interactive
 end
 
 function fish_prompt
-    printf "%s %s %s %s \n%s%s " (set_color blue)(echo $USER) (set_color white)(echo \@) (set_color red)(prompt_hostname) (set_color cyan)(prompt_pwd) (set_color magenta)(fish_git_prompt) (set_color green)(echo "->")
+  printf "%s %s %s %s" (set_color blue)(echo $USER) (set_color white)(echo \@) (set_color red)(prompt_hostname) (set_color cyan)(prompt_pwd) (set_color magenta)(fish_git_prompt)
+  printf "\n%s "  (set_color green)(echo "->")
 end
 
 function fish_right_prompt
