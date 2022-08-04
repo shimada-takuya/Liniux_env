@@ -52,6 +52,14 @@ if [ -d $LOCAL_HOME/.pyenv ]; then
 	eval "$(pyenv init -)"
 fi
 
+#############################################################
+## venv
+if [ -d $LOCAL_HOME/.venv ]; then
+	source $LOCAL_HOME/.venv/bin/activate
+fi
+
+
+
 
 #############################################################
 # Env
