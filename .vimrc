@@ -91,3 +91,22 @@ set backspace=indent,eol,start
 
 "" scroll
 set scrolloff=5
+
+"" Plugin
+"packadd vim-jetpack
+"call jetpack#begin()
+"Jetpack 'tani/vim-jetpack', {'opt': 1} "bootstrap
+"Jetpack 'junegunn/fzf', { 'do': {-> fzf#install()} }
+"Jetpack 'junegunn/fzf.vim'
+"Jetpack 'gkeep/iceberg-dark'
+"Jetpack 'vim-airline/vim-airline'
+"Jetpack 'vim-airline/vim-airline-themes'
+"call jetpack#end()
+
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline_section_c = '%F'
+"let g:airline_theme = 'icebergDark'
+
+"" flake8
+"let g:syntastic_python_checkers = ["flake8"]
+"let g:syntastic_python_flake8_args = "--max-line-length=120 --max-complexity=10"
