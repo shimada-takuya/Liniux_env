@@ -101,6 +101,7 @@ set scrolloff=5
 "Jetpack 'gkeep/iceberg-dark'
 "Jetpack 'vim-airline/vim-airline'
 "Jetpack 'vim-airline/vim-airline-themes'
+"Jetpack 'vim-syntastic/syntastic'
 "call jetpack#end()
 
 "let g:airline#extensions#tabline#enabled = 1
