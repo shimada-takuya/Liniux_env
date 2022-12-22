@@ -93,6 +93,55 @@ set backspace=indent,eol,start
 set scrolloff=5
 
 "" Plugin
+""" dein
+"" Ward off unexpected things that your distro might have made, as
+"" well as sanely reset options when re-sourcing .vimrc
+"set nocompatible
+"
+"" Set dein base path (required)
+"let s:dein_base = '~/.cache/dein/'
+"
+"" Set dein source path (required)
+"let s:dein_src = '~/.cache/dein/repos/github.com/Shougo/dein.vim'
+"
+"" Set dein runtime path (required)
+"execute 'set runtimepath+=' . s:dein_src
+"
+"" Call dein initialization (required)
+"call dein#begin(s:dein_base)
+"
+"call dein#add(s:dein_src)
+"
+"" Your plugins go here:
+"call dein#add('junegunn/fzf', { 'build': './install' })
+"call dein#add('junegunn/fzf.vim', { 'depends': 'junegunn/fzf' })
+"call dein#add('gkeep/iceberg-dark')
+"call dein#add('vim-airline/vim-airline')
+"call dein#add('vim-airline/vim-airline-themes')
+"call dein#add('vim-syntastic/syntastic')
+
+
+" Finish dein initialization (required)
+"call dein#end()
+
+" Attempt to determine the type of a file based on its name and possibly its
+" contents. Use this to allow intelligent auto-indenting for each filetype,
+" and for plugins that are filetype specific.
+"if has('filetype')
+"	filetype indent plugin on
+"endif
+
+" Enable syntax highlighting
+"if has('syntax')
+"	syntax on
+"endif
+
+" Uncomment if you want to install not-installed plugins on startup.
+"if dein#check_install()
+"    call dein#install()
+"endif
+
+""" vim-jetpack
 "packadd vim-jetpack
 "call jetpack#begin()
 "Jetpack 'tani/vim-jetpack', {'opt': 1} "bootstrap
