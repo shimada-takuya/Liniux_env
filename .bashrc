@@ -1,7 +1,7 @@
 #.bashrc
 
-#LOCAL_HOME=$HOME
-LOCAL_HOME=$PWD
+LOCAL_HOME=$HOME
+#LOCAL_HOME=$PWD
 
 # key binding
 set -o vi
